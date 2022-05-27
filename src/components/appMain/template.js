@@ -1,8 +1,11 @@
-export default ({ state, props }) => /* html */ `
+export default ({ state, props, html }) => {
+  console.log(state)
+  return html`
     <div class="ctx-content">
         <router-view></router-view>
     </div>
-    <div class="ctx-nav">
+    <div class="ctx-nav ${state.navIsVisible && 'active'}">
         <app-nav></app-nav>
     </div>
 `
+}

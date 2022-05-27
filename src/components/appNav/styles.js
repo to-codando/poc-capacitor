@@ -3,10 +3,15 @@ export default ({ ctx, css }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width:100%;
     position:relative;
     background:#3d6b7f;
     overflow: hidden;
+  }
+
+  ${ctx}.active {
+    top: -49.125rem
   }
 
   .ctx-nav-list {
@@ -66,5 +71,40 @@ export default ({ ctx, css }) => css`
 
   .ctx-align-right {
     right:1rem
+  }
+
+  .ctx-nav-button {
+    display: none;
+  }
+
+  @media all and (max-width:480px) {
+    .ctx-nav-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width:100%;
+      height:4rem;
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .ctx-nav-button span {
+      color:#fff;
+      font-size: 2rem
+    }
+    .ctx-nav-list {
+      flex-wrap:wrap;
+      height:calc(100vh + 4rem);
+      padding:1rem;
+      
+    }
+    .ctx-nav-list li {
+      height: auto
+    }
+    .ctx-nav-list a {}
+    .ctx-nav-list span {}
+    .ctx-button { display: none}
+    .ctx-button > span {}
+    .ctx-align-left {}
+    .ctx-align-right {}
   }
 `

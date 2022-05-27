@@ -1,4 +1,9 @@
 export default ({ html }) => html`
+  <div class="ctx-nav-button nav-button">
+    <span class="material-symbols-rounded">
+    menu
+    </span>
+  </div>
   <ul class="ctx-nav-list">
     <li>
       <a href="#/">

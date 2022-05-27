@@ -7,5 +7,6 @@ export const appMain = () => {
   const children = () => ({
     appNav
   })
+
   return { template, styles, children }
 }
