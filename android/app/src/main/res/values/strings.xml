@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AppRoxbank</string>
+    <string name="title_activity_main">AppRoxbank</string>
+    <string name="package_name">com.roxbank.app</string>
+    <string name="custom_url_scheme">com.roxbank.app</string>
+</resources>

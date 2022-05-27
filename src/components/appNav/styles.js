@@ -77,7 +77,17 @@ export default ({ ctx, css }) => css`
     display: none;
   }
 
-  @media all and (max-width:480px) {
+  @media all and (max-width:780px) {
+
+    ${ctx} {
+      overflow-y: scroll;
+    }
+
+    ${ctx}.active {
+      height: 100vh;
+      top: calc(-100vh - -4rem);      
+    }
+
     .ctx-nav-button {
       display: flex;
       align-items: center;

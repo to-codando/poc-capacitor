@@ -1,0 +1,6 @@
+{
+  "appId": "com.roxbank.app",
+  "appName": "AppRoxbank",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

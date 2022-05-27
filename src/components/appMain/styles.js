@@ -6,7 +6,8 @@ export default ({ ctx, css }) => css`
         flex-wrap:wrap;
         width:100vw;
         height:100vh;
-        background: #f9f9f9
+        background: #f9f9f9;
+        overflow:hidden;
      } 
      
      .ctx-nav {
@@ -19,11 +20,18 @@ export default ({ ctx, css }) => css`
 
      .ctx-content {
          width: 100vw;
-         height:100vh;
+         height:calc(100vh - 250px);
          background:#a3bbc3;
+         position:fixed;
+         top:0;
+         left:0;
+         right:0;
      }
 
-@media all and (max-width:480px) {
+@media all and (max-width:780px) {
+    .ctx-content {
+        height: calc(100vh - 4rem)
+    }
     .ctx-nav {
         height:4rem;
     }

@@ -12,10 +12,11 @@ export default ({ ctx, css }) => css`
         width:100%;
     }
 
-    .ctx-grid {
+    .ctx-grid-content {
+        display: flex;
+        width:100%;
         max-width:1680px;
         margin:0 auto;
-        overflow-y: scroll;
     }
 
     .ctx-container {
@@ -30,6 +31,7 @@ export default ({ ctx, css }) => css`
         display: flex;
         flex-wrap:wrap;
         width:26.25rem;
+        max-height: calc(100vh - 250px)
     }
 
     .ctx-column-2 {
@@ -43,9 +45,16 @@ export default ({ ctx, css }) => css`
     }
 
     @media all and (max-width: 780px) {
+
+        .ctx-grid-content {
+            flex-wrap: wrap;
+        }
+
         .ctx-column-1,
         .ctx-column-2 {
             width:100%;
+            height:auto;
+            max-height:100%
         }
 
         .ctx-column-2 {

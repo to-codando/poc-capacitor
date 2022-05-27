@@ -1,3 +1,5 @@
+import '@capacitor/core'
+
 import { createApp } from 'lemejs'
 import { router } from './routes'
 import { appMain } from './components/appMain'
