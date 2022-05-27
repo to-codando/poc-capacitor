@@ -40,8 +40,8 @@ div:nth-of-type(2n)>.demo {
   box-sizing: border-box;
 }
 
-.grid .gap *[class^="col_"] {
-  padding: 1rem 1rem 0 1rem;
+.grid.gap *[class^="col_"] {
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 /*** [GUTTERS] ***/
