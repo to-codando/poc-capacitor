@@ -1,4 +1,4 @@
-const esbuild = require("esbuild")
+import esbuild from 'esbuild'
 
 const ENV = process.env.NODE_ENV
 
@@ -19,7 +19,7 @@ if (ENV === "development") {
 				".png": "dataurl",
 				".jpg": "file",
 				".jpeg": "file",
-				".svg": "text",
+				".svg": "file"
 			},
 		})
 		.then(() => {

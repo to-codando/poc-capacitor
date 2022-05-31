@@ -1,6 +1,6 @@
 export default ({ state, props, html }) => {
-  console.log(state)
   return html`
+    <app-loading></app-loading>
     <div class="ctx-content">
         <router-view></router-view>
     </div>

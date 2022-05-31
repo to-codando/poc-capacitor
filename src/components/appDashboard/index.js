@@ -5,6 +5,8 @@ import { appCard } from '../appCard'
 import { appList } from '../appList'
 import { appAccountBalance } from '../appAccountBalance'
 
+import { eventBus } from '../../helpers'
+
 export const appDashboard = () => {
   const children = () => ({
     appCard,
@@ -12,5 +14,13 @@ export const appDashboard = () => {
     appAccountBalance
   })
 
-  return { template, styles, children }
+  const hooks = () => ({
+    afterOnInit
+  })
+
+  const afterOnInit = () => {
+    setTimeout(() => eventBus.emit('toggle-loader'), 5000)
+  }
+
+  return { template, styles, children, hooks }
 }

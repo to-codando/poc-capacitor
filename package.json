@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "./src/main.js",
+	"type": "module",
 	"precise-watcher": {
 		"src": [
 			{
@@ -44,12 +45,15 @@
 		]
 	},
 	"scripts": {
+		"config-android": "pnpm run set-android-path & pnpm run set-android-sdk",
+		"set-android-sdk": "cross-env ANDROID_SDK_ROOT=~/Android/Sdk",
+		"set-android-path": "cross-env CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh",
 		"lint": "pnpm standard --fix",
 		"copy": "shx cp ./index.html ./dist/index.html",
 		"watch": "pnpm precise-watcher",
 		"dev": "cross-env NODE_ENV=development node ./esbuild.config.js",
 		"build": "cross-env NODE_ENV=production node ./esbuild.config.js",
-		"start": "pnpm run dev && pnpm copy & pnpm run watch & npx http-server dist",
+		"start": "pnpm run dev && pnpm copy & pnpm run watch & npx http-server dist & pnpm run config-android",
 		"prod": "pnpm run build && pnpm copy",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -68,6 +72,10 @@
 	"dependencies": {
 		"@capacitor/android": "^3.5.1",
 		"@capacitor/core": "^3.5.1",
-		"lemejs": "^6.0.7"
+		"@capacitor/dialog": "^1.0.7",
+		"animate.css": "^4.1.1",
+		"capacitor-biometric-auth": "^0.1.1",
+		"capacitor-native-biometric": "^3.1.1",
+		"lemejs": "^6.0.9"
 	}
 }

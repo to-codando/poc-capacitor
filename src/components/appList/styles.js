@@ -30,10 +30,31 @@ export default ({ ctx, css }) => css`
     color: transparent;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
  }
+
+ @keyframes toggle {
+   from {
+     opacity: 0
+   }
+
+   25% {
+     opacity: .5
+   }
+
+   50% {
+     opacity: .8
+   }
+
+   to {
+     opacity: 1
+   }
+ }
   
   .ctx-wrapper li {
     width:100%;
     padding:1rem 0;
+    transition: all .5s ease-in;
+    animation-name: toggle;
+    animation-duration: 1s 
   }
 
   .ctx-wrapper li + li {

@@ -8,6 +8,7 @@ export default ({ ctx, css }) => css`
     position:relative;
     background:#3d6b7f;
     overflow: hidden;
+    transition: .3s ease-in-out
   }
 
   ${ctx}.active {
@@ -81,6 +82,7 @@ export default ({ ctx, css }) => css`
 
     ${ctx} {
       overflow-y: scroll;
+      top: calc(100% - 4rem);
     }
 
     ${ctx}.active {

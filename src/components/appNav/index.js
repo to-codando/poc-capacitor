@@ -2,10 +2,6 @@ import template from './template'
 import styles from './styles'
 
 export const appNav = () => {
-  const state = {
-    navIsVisible: false
-  }
-
   const hooks = () => ({
     afterOnRender
   })

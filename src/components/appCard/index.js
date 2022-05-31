@@ -1,6 +1,6 @@
 import template from './template'
 import styles from './styles'
-import { eventBus } from '../../helpers'
+import { eventBus, animateCSS } from '../../helpers'
 
 export const appCard = ({ props }) => {
   const state = {
@@ -22,7 +22,8 @@ export const appCard = ({ props }) => {
     on('click', button, () => toggleBlur(icon))
   }
 
-  const toggleBlur = (icon) => {
+  const toggleBlur = async (icon) => {
+    await animateCSS(icon, 'rubberBand')
     state.applyBlur = !state.applyBlur
     eventBus.emit(`${props.eventEmit}`, { applyBlur: state.applyBlur })
     state.applyBlur
